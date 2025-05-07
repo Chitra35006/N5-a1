@@ -9,12 +9,8 @@ function formatString(input: string, toUpper?: boolean):string{
 }
 
 
-type itemList={
-    title: string; 
-    rating: number
-}
-function filterByRating(items: itemList[]): itemList[]{
-    const result: itemList[] =[];
+function filterByRating(items: { title: string; rating: number }[]): { title: string; rating: number }[]{
+    const result: { title: string; rating: number }[] =[];
 
     for(const item of items){
         if(item.rating > 4){
