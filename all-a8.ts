@@ -72,3 +72,14 @@ const myCar = new Car("Toyota", 2020, "Corolla");
 myCar.getInfo();   
 myCar.getModel();
 
+function processValue(value: string | number): number {
+    if(typeof(value)=== "number"){
+        return value*2;
+    }
+    else{
+        return value.length;
+    }
+}
+
+console.log(processValue("hello")); 
+console.log(processValue(10)); 
