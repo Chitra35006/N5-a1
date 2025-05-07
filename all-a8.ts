@@ -35,3 +35,14 @@ const books = [
   
   console.log(filterByRating(books));
   
+
+  function concatenateArrays<T>(...arrays: T[][]): T[]{
+    const result : T[] = [];
+    for(const a1 of arrays ){
+        result.push(...a1);
+    }
+    return result;
+}
+
+console.log(concatenateArrays(["a", "b"], ["c"]));     
+console.log(concatenateArrays([1, 2], [3, 4], [5])); 
