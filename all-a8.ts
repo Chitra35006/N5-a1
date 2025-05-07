@@ -46,3 +46,29 @@ const books = [
 
 console.log(concatenateArrays(["a", "b"], ["c"]));     
 console.log(concatenateArrays([1, 2], [3, 4], [5])); 
+
+
+class Vehicle{
+    constructor (private make: string, private year: number ){
+        
+    }
+    getInfo(){
+        console.log(`"Make: ${this.make}, Year: ${this.year}"`);
+    }
+}
+
+class Car extends Vehicle{
+    private model : string;
+    constructor( make: string, year: number, model: string){
+        super(make,year)
+        this.model=model;
+    }
+    getModel(){
+        console.log(`"Model: ${this.model}"`);
+    }
+}
+
+const myCar = new Car("Toyota", 2020, "Corolla");
+myCar.getInfo();   
+myCar.getModel();
+
