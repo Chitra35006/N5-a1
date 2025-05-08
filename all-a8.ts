@@ -1,5 +1,5 @@
 function formatString(input: string, toUpper?: boolean):string{
-    if(toUpper === false || toUpper === null){
+    if(toUpper === false){
         return input.toLowerCase()
     }
     else{
@@ -22,10 +22,10 @@ function filterByRating(items: { title: string; rating: number }[]): { title: st
 
   
 
-  function concatenateArrays<T>(...arrays: T[][]): T[]{
+function concatenateArrays<T>(...arrays: T[][]): T[]{
     const result : T[] = [];
-    for(const a1 of arrays ){
-        result.push(...a1);
+    for(const item of arrays ){
+        result.push(...item);
     }
     return result;
 }
